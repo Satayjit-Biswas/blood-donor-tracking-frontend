@@ -110,7 +110,7 @@ const Navbar = () => {
                     <div className={navbar_styles.bottom_header_area}>
                         <div className={navbar_styles.logo}>
                             <a href="#">
-                                <Image src={logo} width="90" height="80" />
+                                <Image src={logo} width="160" height="80" />
                             </a>
                         </div>
 
@@ -123,10 +123,7 @@ const Navbar = () => {
                                     <a href="service">Services</a>
                                 </li>
                                 <li>
-                                    <a href="project">Our project</a>
-                                </li>
-                                <li>
-                                    <a href="order">Order</a>
+                                    <a href="Find-Blood">Find Donor</a>
                                 </li>
                                 <li>
                                     <a href="blog">Blog</a>

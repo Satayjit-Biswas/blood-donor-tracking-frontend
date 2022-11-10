@@ -1,8 +1,9 @@
-import styles from '../styles/Home.module.css'
+import Slider from '../components/Home_components/Slider'
 
 export default function Home() {
   return (
-    <div className={styles.container}>
-    </div>
+    <>
+      <Slider></Slider>
+    </>
   )
 }
