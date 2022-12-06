@@ -1,8 +1,27 @@
 /* --------------Slider Area ---------- */
-.slider_area_gap{
+.slider_area_gap {
   margin-top: 120px;
 }
-.slider_area{
+
+.slider_area h2 {
+  max-width: 55%;
+  padding: 20px 0;
+}
+.slider_area_box_1 {
   height: 100vh;
   background-image: url(../assets/img/home_1_slider_1.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  padding-top: 30vh;
+  color: rgb(255, 255, 255);
+}
+.slider_area_box_2 {
+  height: 100vh;
+  background-image: url(../assets/img/home_1_slider_2.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  padding-top: 30vh;
+  color: rgb(255, 255, 255);
 }
