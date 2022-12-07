@@ -21,11 +21,14 @@ const Who = () => {
                 <li>Examine critically to ensure alignment.</li>
                 <li>The extra care of a multi-disciplinary team.</li>
               </ul>
+              <div className="custom_btn mt_20">
+                <a href="#">Join now</a>
+              </div>
             </div>
           </div>
           <div className="col-lg-6">
-            <div className="who_img">
-              <Image src={t1} width="500" height="440" />
+            <div className={`${Home_style.who_img}`}>
+              <Image src={t1} width="500" height="480" />
             </div>
           </div>
         </div>

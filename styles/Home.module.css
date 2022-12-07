@@ -36,12 +36,12 @@
   background-color: #f9fafb;
   border-radius: 5px;
   box-shadow: 0 0 15px 5px #e2e2e288;
-  padding: 60px 40px;
+  padding: 50px 40px;
   margin-top: 60px;
   max-width: 650px;
 }
 .who_text_box p {
-  margin: 32px 0 22px 0;
+  margin: 25px 0 15px 0;
 }
 .who_text_box ul li {
   font-size: 16px;
@@ -50,7 +50,7 @@
   position: relative;
   line-height: 27px;
   color: #454545;
-  margin-top: 10px;
+  margin-top: 6px;
 }
 .who_text_box ul li::after {
   content: "";
@@ -69,4 +69,16 @@
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding;
   background-clip: padding-box;
+}
+.who_img img {
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 80px;
+}
+
+/*------------------ become_area css  -------------------*/
+.become_area_box {
+  background-color: #f9fafb;
+  text-align: center;
+  padding: 80px 0;
 }
