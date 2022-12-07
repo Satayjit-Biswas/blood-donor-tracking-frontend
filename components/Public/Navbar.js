@@ -109,7 +109,7 @@ const Navbar = () => {
                 <div className="container">
                     <div className={navbar_styles.bottom_header_area}>
                         <div className={navbar_styles.logo}>
-                            <a href="#">
+                            <a href=".">
                                 <Image src={logo} width="160" height="80" />
                             </a>
                         </div>
@@ -117,7 +117,7 @@ const Navbar = () => {
                         <div className={navbar_styles.menu}>
                             <ul>
                                 <li>
-                                    <a href="">Home</a>
+                                    <a href=".">Home</a>
                                 </li>
                                 <li>
                                     <a href="service">Services</a>
@@ -134,10 +134,10 @@ const Navbar = () => {
                                 <li>
                                     <a href="contact">Contact</a>
                                 </li>
-                                {/* <li>
-                                    <a href="login">login</a>
-                                </li> */}
                                 <li>
+                                    <a href="login">login</a>
+                                </li>
+                                {/* <li>
                                     <div
                                         className={`${navbar_styles.login_icon}`}
                                         ref={click_profile}
@@ -169,7 +169,7 @@ const Navbar = () => {
                                             </li>
                                         </ul>
                                     </div>
-                                </li>
+                                </li> */}
                             </ul>
                         </div>
                         <div

@@ -1,0 +1,201 @@
+/*-------------------- Contact area ------------------ */
+
+.login_form_area_box {
+  display: flex;
+  box-shadow: 0 0 25px 0px rgb(195 195 195);
+  margin-bottom: 80px;
+}
+.form_left {
+  background-color: #bb0b0b;
+  width: 30%;
+  padding: 60px 40px;
+  color: #fff;
+  transition: 0.4s;
+}
+.form_left:hover {
+  width: 70%;
+}
+
+.form_left:hover + .form_right {
+  width: 30%;
+}
+.login_form_area h2 {
+  margin-bottom: 20px;
+  font-weight: 400;
+  font-size: 23px;
+}
+
+.form_right {
+  background-color: #fff;
+  width: 70%;
+  padding: 60px 40px;
+  transition: 0.4s;
+}
+
+.input_box label {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 14px;
+}
+.input_box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  border-bottom: 1px solid rgb(207, 205, 205);
+  border-top: none;
+  border-left: none;
+  background-color: none;
+  border-right: none;
+  transition: 0.3s;
+  background-color: rgba(0, 0, 0, 0);
+  margin-bottom: 25px;
+}
+
+.form_left .input_box input {
+  color: rgb(255, 255, 255);
+}
+.form_left .input_box input::placeholder {
+  color: rgb(173, 173, 173);
+}
+.input_box input:focus-visible {
+  outline: none;
+  border-color: #bb0b0b;
+}
+.form_left .input_box input:focus-visible {
+  outline: none;
+  border-color: #ffffff;
+}
+
+.login_form_area_box button {
+  display: inline-block;
+  padding: 12px 35px 12px 35px;
+  border-radius: 0px 0px 0px 0px;
+  color: #fff;
+  background: #bb0b0b;
+  overflow: hidden;
+  position: relative;
+  font-size: 17px;
+  font-weight: 600;
+  text-transform: capitalize;
+  z-index: 1;
+  border: none;
+}
+.login_form_area_box button::after {
+  position: absolute;
+  content: "";
+  width: 0px;
+  height: 0px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: -1;
+  opacity: 0;
+  transition: 0.4s;
+  background-color: #8a0000;
+}
+.login_form_area_box button:hover:after {
+  width: 300px;
+  height: 200px;
+  opacity: 1;
+}
+.login_form_area_box .form_left button {
+  background: #fff !important;
+  color: #000;
+}
+.login_form_area_box .form_left button:hover:after {
+  background-color: #e7e7e7;
+}
+.login_form_area_box p a {
+  margin-top: 30px;
+  transition: 0.3s;
+}
+.login_form_area_box p a:hover {
+  color: #bb0b0b;
+}
+
+/*------------------ Media Query -------------------*/
+
+@media (min-width: 1200px) {
+}
+
+@media (max-width: 1199px) {
+  .login_form_area_box button {
+    padding: 12px 20px 12px 20px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .form_left {
+    padding: 60px 20px;
+  }
+  .form_left h2 {
+    font-size: 17px;
+    white-space: nowrap;
+  }
+  .input_box label {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 13px;
+  }
+}
+
+/*Medium devices (tablets, 767px and down)*/
+@media (max-width: 767px) {
+  .form_left,
+  .form_right {
+    padding: 60px 20px;
+  }
+  .form_left h2,
+  .form_right h2 {
+    font-size: 14px;
+    white-space: nowrap;
+  }
+  .form_left h2 {
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 23px;
+    margin: 0px !important;
+    display: inline-block;
+    cursor: pointer;
+  }
+  .input_box label {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 13px;
+  }
+  .form_right p {
+    font-size: 12px;
+  }
+  .login_form_area_box {
+    flex-direction: column;
+  }
+  .form_right,
+  .form_left {
+    width: 100% !important;
+  }
+  .form_left h2,
+  .form_right h2 {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .form_left {
+    width: 100%;
+    overflow: hidden;
+    max-height: 70px;
+    transition: 0.4s;
+    padding: 20px;
+  }
+  .Back button {
+    display: block;
+    margin-top: 20px;
+  }
+  .form_left.form_showed {
+    max-height: 700px;
+    padding: 60px 20px;
+  }
+}
+
+/*Small devices (landscape phones, 575px and down)*/
+@media (max-width: 575px) {
+}

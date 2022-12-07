@@ -91,17 +91,32 @@ img {
 }
 .under_line {
   position: relative;
+  display: inline-block;
 }
 .under_line::after {
   position: absolute;
   content: "";
   top: 45px;
-  left: 0;
+  left: 0%;
   width: 80px;
   height: 3px;
   background-color: #dd0211;
 }
 
+.page_header h2 {
+  display: flex;
+  align-items: flex-end;
+  margin-top: 150px;
+  padding: 50px 0;
+  color: rgb(53, 53, 53);
+  font-size: 30px;
+  text-transform: capitalize;
+}
+.page_header h2::after {
+  top: auto;
+  bottom: 100px;
+  height: 4px;
+}
 /* input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
@@ -142,6 +157,11 @@ input:-webkit-autofill:active {
 @media (max-width: 767.98px) {
   .custom_btn a {
     padding: 13px 20px 13px 20px;
+  }
+  .page_header h2 {
+    height: 43vh;
+    margin-bottom: -55px;
+    font-size: 20px;
   }
 }
 

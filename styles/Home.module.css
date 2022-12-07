@@ -81,4 +81,28 @@
   background-color: #f9fafb;
   text-align: center;
   padding: 80px 0;
+  margin: 80px 0;
+}
+/*------------------ become_area css  -------------------*/
+.Volunteer_area {
+  background-image: url(../assets/img/team_feat_bg.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+.Volunteer_area_box {
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.Volunteer_area_box h4 {
+  color: #b8b8b8;
+  font-weight: 400;
+  font-size: 30px;
+}
+.Volunteer_area_box h2 {
+  color: #ffffff;
 }
