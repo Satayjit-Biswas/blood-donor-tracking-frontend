@@ -119,11 +119,9 @@ const Navbar = () => {
                                 <li>
                                     <a href=".">Home</a>
                                 </li>
+                                
                                 <li>
-                                    <a href="service">Services</a>
-                                </li>
-                                <li>
-                                    <a href="Find-Blood">Find Donor</a>
+                                    <a href="donor">Find Donor</a>
                                 </li>
                                 <li>
                                     <a href="blog">Blog</a>
@@ -137,7 +135,8 @@ const Navbar = () => {
                                 <li>
                                     <a href="login">login</a>
                                 </li>
-                                {/* <li>
+                                {/* drop down  */}
+                                <li>
                                     <div
                                         className={`${navbar_styles.login_icon}`}
                                         ref={click_profile}
@@ -169,7 +168,7 @@ const Navbar = () => {
                                             </li>
                                         </ul>
                                     </div>
-                                </li> */}
+                                </li>
                             </ul>
                         </div>
                         <div
