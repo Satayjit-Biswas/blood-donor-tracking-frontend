@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 import HashLoader from "react-spinners/HashLoader";
 import Donor_user from "../components/Donor/Donor_user";
 import Page_header from "../components/Public/Page_header";
@@ -11,11 +11,10 @@ const donor = () => {
     fetch("http://localhost:5000/api/user")
       .then((res) => res.json())
       .then((data) => {
-        setUser(data);
-        setloading(false);
-      });
+        setUser(data)
+        setloading(false)
+      })
   }, []);
-  console.log(User);
   return (
     <div className="donor_area">
       <Page_header text="Find Donor"></Page_header>

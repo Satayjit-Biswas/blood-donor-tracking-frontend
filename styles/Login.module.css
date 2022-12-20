@@ -102,6 +102,8 @@
 .login_form_area_box .form_left button {
   background: #fff !important;
   color: #000;
+  min-width: 235px;
+  height: 48px;
 }
 .login_form_area_box .form_left button:hover:after {
   background-color: #e7e7e7;
@@ -113,7 +115,9 @@
 .login_form_area_box p a:hover {
   color: #bb0b0b;
 }
-
+.login_form_area_box button {
+  cursor: pointer;
+}
 /*------------------ Media Query -------------------*/
 
 @media (min-width: 1200px) {

@@ -4,11 +4,11 @@ import { AiOutlinePhone } from "react-icons/ai";
 import { ImLocation2 } from "react-icons/im";
 import { MdOutlineMarkEmailRead } from "react-icons/md";
 import b from "../../assets/img/b.png";
-import d1 from "../../assets/img/d1.jpg";
+import d1 from "../../assets/img/d1.png";
 import Donor_style from "../../styles/Donor.module.css";
 
 const Donor_user = (props) => {
-    const {_id,name,email,phone,location,blood} = props.donor;
+    const {_id,name,profession,email,phone,location,blood} = props.donor;
   return (
     <div><div className={`${Donor_style.donor_box}`}>
     <Image src={d1} width="280" height="300" />
@@ -20,7 +20,7 @@ const Donor_user = (props) => {
           <span>{blood}</span>
         </div>
       </div>
-      <p>Assistant teacher</p>
+      <p>{profession}</p>
       <ul>
         <li>
           <a href={`mailto:${email}`}>

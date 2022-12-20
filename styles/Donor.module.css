@@ -8,6 +8,12 @@
   outline: none;
   margin-top: 20px;
 }
+.donor_area_left {
+  position: sticky;
+  top: 120px;
+  left: 0;
+  margin-bottom: 100px;
+}
 .donor_area_right {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -59,6 +65,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.blood_group span {
+  text-transform: uppercase;
 }
 .donor_box ul {
   display: flex;
