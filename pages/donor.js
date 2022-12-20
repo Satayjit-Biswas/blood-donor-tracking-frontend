@@ -1,20 +1,27 @@
-import Image from "next/image";
-import React from "react";
-import { AiOutlinePhone } from "react-icons/ai";
-import { ImLocation2 } from "react-icons/im";
-import { MdOutlineMarkEmailRead } from "react-icons/md";
-import b from "../assets/img/b.png";
-import d1 from "../assets/img/d1.jpg";
+import React, { useEffect, useState } from "react";
+import HashLoader from "react-spinners/HashLoader";
+import Donor_user from "../components/Donor/Donor_user";
 import Page_header from "../components/Public/Page_header";
 import Donor_style from "../styles/Donor.module.css";
 
 const donor = () => {
+  const [loading, setloading] = useState([true]);
+  const [User, setUser] = useState([]);
+  useEffect(() => {
+    fetch("http://localhost:5000/api/user")
+      .then((res) => res.json())
+      .then((data) => {
+        setUser(data);
+        setloading(false);
+      });
+  }, []);
+  console.log(User);
   return (
     <div className="donor_area">
       <Page_header text="Find Donor"></Page_header>
       <div className="container">
         <div className="row">
-          <div className="col-md-3">
+          <div className="col-md-2">
             <div className={`${Donor_style.donor_area_left}`}>
               <div className={`${Donor_style.find_input}`}>
                 <p>Find your blood:</p>
@@ -27,159 +34,21 @@ const donor = () => {
               </div>
             </div>
           </div>
-          <div className="col-md-9">
-            <div className={`${Donor_style.donor_area_right}`}>
-              <div className={`${Donor_style.donor_box}`}>
-                <Image src={d1} width="280" height="300" />
-                <div className={`${Donor_style.donor_text}`}>
-                  <div className={`${Donor_style.doner_name}`}>
-                    <h3>Harriet wason</h3>
-                    <div className={`${Donor_style.blood_group}`}>
-                      <Image src={b} width="80" height="30" />
-                      <span>A+</span>
-                    </div>
-                  </div>
-                  <p>Assistant teacher</p>
-                  <ul>
-                    <li>
-                      <a href="mailto:xyz@abc.com">
-                        <MdOutlineMarkEmailRead />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="tel:0123456789">
-                        <AiOutlinePhone />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <ImLocation2 />
-                      </a>
-                    </li>
-                  </ul>
-                </div>
+          <div className="col-md-10">
+            {loading ? (
+              <HashLoader
+                color={"#dd0211"}
+                loading={true}
+                size={50}
+                cssOverride={{ display: "block", margin: "0 auto" }}
+              />
+            ) : (
+              <div className={`${Donor_style.donor_area_right}`}>
+                {User.map((donor) => (
+                  <Donor_user key={donor._id} donor={donor}></Donor_user>
+                ))}
               </div>
-              <div className={`${Donor_style.donor_box}`}>
-                <Image src={d1} width="280" height="300" />
-                <div className={`${Donor_style.donor_text}`}>
-                  <div className={`${Donor_style.doner_name}`}>
-                    <h3>Harriet wason</h3>
-                    <div className={`${Donor_style.blood_group}`}>
-                      <Image src={b} width="80" height="30" />
-                      <span>A+</span>
-                    </div>
-                  </div>
-                  <p>Assistant teacher</p>
-                  <ul>
-                    <li>
-                      <a href="mailto:xyz@abc.com">
-                        <MdOutlineMarkEmailRead />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="tel:0123456789">
-                        <AiOutlinePhone />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <ImLocation2 />
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div className={`${Donor_style.donor_box}`}>
-                <Image src={d1} width="280" height="300" />
-                <div className={`${Donor_style.donor_text}`}>
-                  <div className={`${Donor_style.doner_name}`}>
-                    <h3>Harriet wason</h3>
-                    <div className={`${Donor_style.blood_group}`}>
-                      <Image src={b} width="80" height="30" />
-                      <span>A+</span>
-                    </div>
-                  </div>
-                  <p>Assistant teacher</p>
-                  <ul>
-                    <li>
-                      <a href="mailto:xyz@abc.com">
-                        <MdOutlineMarkEmailRead />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="tel:0123456789">
-                        <AiOutlinePhone />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <ImLocation2 />
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div className={`${Donor_style.donor_box}`}>
-                <Image src={d1} width="280" height="300" />
-                <div className={`${Donor_style.donor_text}`}>
-                  <div className={`${Donor_style.doner_name}`}>
-                    <h3>Harriet wason</h3>
-                    <div className={`${Donor_style.blood_group}`}>
-                      <Image src={b} width="80" height="30" />
-                      <span>A+</span>
-                    </div>
-                  </div>
-                  <p>Assistant teacher</p>
-                  <ul>
-                    <li>
-                      <a href="mailto:xyz@abc.com">
-                        <MdOutlineMarkEmailRead />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="tel:0123456789">
-                        <AiOutlinePhone />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <ImLocation2 />
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div className={`${Donor_style.donor_box}`}>
-                <Image src={d1} width="280" height="300" />
-                <div className={`${Donor_style.donor_text}`}>
-                  <div className={`${Donor_style.doner_name}`}>
-                    <h3>Harriet wason</h3>
-                    <div className={`${Donor_style.blood_group}`}>
-                      <Image src={b} width="80" height="30" />
-                      <span>A+</span>
-                    </div>
-                  </div>
-                  <p>Assistant teacher</p>
-                  <ul>
-                    <li>
-                      <a href="mailto:xyz@abc.com">
-                        <MdOutlineMarkEmailRead />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="tel:0123456789">
-                        <AiOutlinePhone />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <ImLocation2 />
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+            )}
           </div>
         </div>
       </div>

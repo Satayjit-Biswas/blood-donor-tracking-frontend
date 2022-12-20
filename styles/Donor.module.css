@@ -6,12 +6,12 @@
   width: 100%;
   border: 1px solid rgb(0, 0, 0);
   outline: none;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 .donor_area_right {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
+  grid-gap: 5px;
 }
 .donor_box {
   padding: 20px;
