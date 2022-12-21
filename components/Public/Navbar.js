@@ -3,9 +3,9 @@ import { useEffect, useRef } from "react";
 import { BsClockHistory, BsTwitter } from "react-icons/bs";
 import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 import {
-    MdAddIcCall,
-    MdAddLocationAlt,
-    MdOutlineMarkEmailRead
+  MdAddIcCall,
+  MdAddLocationAlt,
+  MdOutlineMarkEmailRead
 } from "react-icons/md";
 import { TiThMenuOutline } from "react-icons/ti";
 import logo from "../../assets/img/logo.png";
@@ -122,7 +122,7 @@ const Navbar = () => {
                   <a href="contact">Contact</a>
                 </li>
                 {user.email ? (
-                  <li>
+                  <li className={`${navbar_styles.login_li}`}>
                     <div
                       className={`${navbar_styles.login_icon}`}
                       ref={click_profile}
@@ -144,7 +144,7 @@ const Navbar = () => {
                     </div>
                   </li>
                 ) : (
-                  <li>
+                  <li className={`${navbar_styles.login_li}`}>
                     <a href="login">login</a>
                   </li>
                 )}

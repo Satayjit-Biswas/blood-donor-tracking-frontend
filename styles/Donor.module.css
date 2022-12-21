@@ -20,6 +20,7 @@
   grid-gap: 5px;
 }
 .donor_box {
+  border: 1px solid #e4e4e4;
   padding: 20px;
   transition: 0.3s;
   border-radius: 5px;

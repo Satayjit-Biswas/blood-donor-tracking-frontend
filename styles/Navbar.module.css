@@ -75,8 +75,9 @@
   display: inline-block;
   margin: 0 18px;
 }
-.menu ul li:last-child {
-  margin-right: 0;
+.menu ul li:last-child,
+.login_li {
+  margin-right: 0 !important;
 }
 .menu > ul > li > a {
   color: #fff;
