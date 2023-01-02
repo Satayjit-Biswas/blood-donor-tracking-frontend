@@ -96,3 +96,13 @@
   background-color: #dd0211;
   color: #ffffff;
 }
+.donor_box {
+  position: relative;
+}
+.verified {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 30px;
+  color: #03b414;
+}

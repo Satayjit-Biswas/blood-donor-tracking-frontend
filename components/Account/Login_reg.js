@@ -1,5 +1,5 @@
 import { useRouter } from "next/navigation";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import ClipLoader from "react-spinners/ClipLoader";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -7,6 +7,25 @@ import useFirebase from "../../hooks/useFirebase";
 import Login_styles from "../../styles/Login.module.css";
 
 const Login_reg = () => {
+  // location 
+  const [Location, setLocation] = useState({});
+  const { latitude, longitude } = Location;
+  const url = `https://www.google.com/maps/place/${latitude}N ${longitude}E`;
+
+  const successCallback = (position) => {
+    setLocation(position.coords);
+    console.log(position.coords);
+  };
+  const errorCallbacks = (err) => {
+    console.log(err);
+  };
+  useEffect(() => {
+    navigator.geolocation.getCurrentPosition(successCallback, errorCallbacks);
+  });
+
+
+
+  
   const router = useRouter();
   const [loading, setLoading] = useState(false);
 
@@ -24,7 +43,7 @@ const Login_reg = () => {
     const profession = event.target.profession.value;
     const email = event.target.email.value;
     const phone = event.target.phone.value;
-    const blood = event.target.blood.value;
+    const blood = event.target.blood.value.toUpperCase();
     const password = event.target.password.value;
     handleRegistration(email, password)
       .then((res) => {
@@ -40,7 +59,7 @@ const Login_reg = () => {
       profession: profession,
       email: email,
       phone: phone,
-      location: "https://goo.gl/maps/hXY23Ha1nmEiJvRg9",
+      location: url,
       blood: blood,
       password: password,
     };
@@ -107,6 +126,7 @@ const handleLogin = (event) => {
                 <div className={Login_styles.input_box}>
                   <label>Your Blood Group</label>
                   <input
+                    className={Login_styles.input_Blood}
                     type="text"
                     name="blood"required
                     placeholder="Your Blood Group (O+ , O- , A- , A+ , AB+....)"
